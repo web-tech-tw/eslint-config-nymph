@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-nymph",
   "version": "0.14.0",
-  "description": "ESLint shareable config copied from the Google style",
+  "description": "ESLint shareable config copied from the Google style.",
   "license": "Apache-2.0",
   "repository": "https://github.com/web-tech-tw/eslint-config-nymph",
   "author": "Web-Tech-TW",
@@ -35,9 +35,6 @@
     "hint"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=5.16.0"
+    "eslint": "^9.14.0"
   }
 }
