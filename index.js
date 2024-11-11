@@ -279,7 +279,9 @@ module.exports = {
     'padded-blocks': ['error', 'never'],
     // "padding-line-between-statements": "off",
     'quote-props': ['error', 'consistent'],
-    'quotes': ['error', 'single', {allowTemplateLiterals: true}],
+    'quotes': ['error', 'single', {
+      allowTemplateLiterals: true,
+    }],
     'semi': 'error',
     'semi-spacing': 'error',
     // "semi-style": "off",
