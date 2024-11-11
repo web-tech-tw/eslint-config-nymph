@@ -10,3 +10,7 @@ ESLint shareable config copied from the Google style.
 ```shell
 npm install --save-dev eslint eslint-config-nymph
 ```
+
+## License
+
+Apache-2 © Google & Web-Tech-TW
