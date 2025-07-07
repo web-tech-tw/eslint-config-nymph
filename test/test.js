@@ -16,19 +16,19 @@
 
 'use strict';
 
-const assert = require('node:assert');
-const {ESLint} = require('eslint');
+import assert, {equal} from 'node:assert';
+import {ESLint} from 'eslint';
 
 // Runs the linter on the repo files and asserts no errors were found.
 (async () => {
   // Use the rules defined in this repo to test against.
   const eslint = new ESLint({
-    overrideConfigFile: 'index.js',
+    overrideConfigFile: 'eslint.config.js',
   });
 
   // The source files to lint.
   const sourceFiles = [
-    'index.js',
+    'eslint.config.js',
     'test/test.js',
   ];
 
@@ -40,8 +40,8 @@ const {ESLint} = require('eslint');
       (acc, result) => acc + result.warningCount, 0,
   );
 
-  assert.equal(errorCount, 0);
-  assert.equal(warningCount, 0);
+  equal(errorCount, 0);
+  equal(warningCount, 0);
 
   sourceFiles.forEach((file, index) => {
     assert(results[index].filePath.endsWith(file));
