@@ -22,9 +22,13 @@ const {ESLint} = require('eslint');
 // Runs the linter on the repo files and asserts no errors were found.
 (async () => {
   // Use the rules defined in this repo to test against.
-  const eslint = new ESLint({
-    overrideConfigFile: 'index.js',
-  });
+  // Prefer flat config entry. If it fails (e.g., compat missing), fall back to legacy.
+  let eslint;
+  try {
+    eslint = new ESLint({ overrideConfigFile: 'flat.js' });
+  } catch (e) {
+    eslint = new ESLint({ overrideConfigFile: 'index.js' });
+  }
 
   // The source files to lint.
   const sourceFiles = [
