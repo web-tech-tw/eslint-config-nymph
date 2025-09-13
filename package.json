@@ -3,7 +3,10 @@
   "version": "0.15.3",
   "description": "ESLint shareable config copied from the Google style.",
   "license": "Apache-2.0",
-  "repository": "https://github.com/web-tech-tw/eslint-config-nymph",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-tech-tw/eslint-config-nymph.git"
+  },
   "author": "Web-Tech-TW",
   "engines": {
     "node": ">=18.18.0"
