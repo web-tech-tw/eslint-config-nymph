@@ -8,9 +8,9 @@
 'use strict';
 
 const legacyConfig = require('./index.js');
-const { FlatCompat } = require('@eslint/eslintrc');
+const {FlatCompat} = require('@eslint/eslintrc');
 
-const compat = new FlatCompat({ baseDirectory: __dirname });
+const compat = new FlatCompat({baseDirectory: __dirname});
 
 // Convert legacy rules-only config object to Flat Config array.
 const flatFromLegacy = compat.config(legacyConfig);
